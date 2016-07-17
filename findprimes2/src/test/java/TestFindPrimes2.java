@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * @author Wolle
  */
-public class TestFindPrimes
+public class TestFindPrimes2
 {
     @Test
     public void testFindPrimes()

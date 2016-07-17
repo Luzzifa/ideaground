@@ -7,22 +7,20 @@ import java.sql.Timestamp
 *
 * @author Wolle
 */
-object FindPrimes
+class FindPrimes (val maxPrimes: Int)
 {
     val maxValue = Long.MAX_VALUE
-    val maxPrimes = 10000000
     val primes = LongArray(maxPrimes, { 0L })
     val hoch2 = LongArray(maxPrimes, { 0L })
     var size = 0
 
-    val logInterval = 100000
+    val logInterval = maxPrimes / 100
     var nextLog = logInterval
 
     val start = System.currentTimeMillis()
     var logstart = start
 
-    @JvmStatic
-    fun main(args: Array<String>)
+    fun run()
     {
         println("Start at " + Timestamp(start))
 
@@ -33,6 +31,10 @@ object FindPrimes
             if (isPrime(n))
             {
                 addPrime(n)
+                if (size >= maxPrimes)
+                {
+                    break
+                }
             }
         }
         val end = System.currentTimeMillis()
