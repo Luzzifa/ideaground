@@ -15,7 +15,7 @@ public class FindPrimes2
      */
     public static void main(String[] args)
     {
-        new FindPrimes2().run();
+        new FindPrimes2().run(10000000);
     }
 
 
@@ -27,16 +27,15 @@ public class FindPrimes2
         // TODO Auto-generated constructor stub
     }
 
-    public void run()
+    public void run(final int maxPrimes)
     {
         final long maxValue = Long.MAX_VALUE;
-        final int maxPrimes = 10000000;
         final long[] primes = new long[maxPrimes];
         final long[] hoch2 = new long[maxPrimes];
         int size = 0;
 
-        int nextLog = 100000;
-        int logInterval = 100000;
+        int nextLog = maxPrimes / 100;
+        int logInterval = nextLog;
 
         long start = System.currentTimeMillis();
         long logstart = start;
