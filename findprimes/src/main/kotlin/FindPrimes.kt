@@ -26,7 +26,7 @@ class FindPrimes (val maxPrimes: Int)
 
         addPrime(2)
         //for (var n = 3; n < maxValue; n+=2)
-        for (n: Long in 3..maxValue step 2)
+        for (n: Long in 3..maxValue step 2L)
         {
             if (isPrime(n))
             {
