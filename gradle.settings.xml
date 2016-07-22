@@ -1,6 +1,0 @@
-<application>
-  <component name="GradleSystemSettings">
-    <option name="serviceDirectoryPath" value="D:/Develop/Work/.gradle" />
-    <option name="gradleVmOptions" value="-Xms2g -Xmx2g -XX:+UseG1GC" />
-  </component>
-</application>
